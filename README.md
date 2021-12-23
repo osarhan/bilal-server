@@ -2,9 +2,9 @@
 
 Need to add a package?
 
-poetry add <package-name>
+poetry add package-name
 
-poetry remove <pacakge-name>
+poetry remove pacakge-name
 
 
 poetry install
