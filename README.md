@@ -1,22 +1,22 @@
 # bilal-server
 
-**First install Poetry**
+***First install Poetry***
 
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
-**Package management**
+***Package management***
 
 poetry add package-name
 
 poetry remove pacakge-name
 
-**Install and Update**
+***Install and Update***
 
 poetry install
 
 poetry update
 
-**Run the server**
+***Run the server***
 
 poetry run uvicorn bilal_server.main:app
 
