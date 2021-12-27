@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from bilal_server.routers import add_routes
 
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"Data" : "Test"}
 
 def _initialize():
     app = FastAPI(
