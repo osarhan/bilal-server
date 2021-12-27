@@ -1,18 +1,25 @@
 # bilal-server
 
-Need to add a package?
+## First install Poetry
 
-poetry add package-name
+`curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -`
 
-poetry remove pacakge-name
+## Package management
 
+`poetry add package-name`
 
-poetry install
+`poetry remove pacakge-name`
 
-poetry update
+## Install and Update
 
-poetry run uvicorn bilal_server.main:app
+`poetry install`
 
-Runs on localhost:8000
+`poetry update`
+
+## Run the server
+
+`poetry run uvicorn bilal_server.main:app`
+
+`Runs on localhost:8000`
   
-find docs at localhost:8000/docs or localhost:8000/redoc
+find docs at `localhost:8000/docs` or `localhost:8000/redoc`
