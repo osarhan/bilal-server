@@ -1,17 +1,17 @@
 # bilal-server
 
-## First install Docker
+## First install Poetry
 
-`curl -sSL https://get.docker.com | sh`
+`curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -`
 
-`sudo usermod -aG docker $USER`
+## Install packages
 
-Now reboot
+`poetry install`
 
-## Next
+## Activate env and launch FastAPI server
 
+`poetry shell`
 
-## Next
+`uvicorn bilal_server.main:app --reload`
 
-
-## Next
+Navigate to: `http://127.0.0.1:8000/docs`

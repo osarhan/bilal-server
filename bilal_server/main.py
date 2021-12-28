@@ -1,29 +1,18 @@
 from fastapi import FastAPI
-from bilal_server.routers import add_routes
+from bilal_server.models import media_info
+from bilal_server.play_athan import execute_athan
 
+# creating instance of FastAPI
 app = FastAPI()
 
+# just Hello World for now
 @app.get("/")
-def home():
-    return {"Data" : "Test"}
+async def root():
+    return "Hello World"
 
-def _initialize():
-    app = FastAPI(
-        title='Bilal Server',
-        description='Backend server for Athan App',
-    )
-    add_routes(app)
-    return app
-
-
-app = _initialize()
-
-
-@app.on_event("startup")
-async def startup_event():
-    pass
-
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    pass
+# play a sound with input as Goolge Drive file ID
+@app.post("/sound")
+# update this so it pulls defaults from config
+async def sound(media_info: media_info):
+    response = execute_athan(media_info.audio_id, media_info.speaker)
+    return response
